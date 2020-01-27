@@ -584,7 +584,7 @@ class FMIGenerator:
 			if platform.system() == "Windows":
 				
 				# call batch file to build the FMI library
-				pipe = subprocess.Popen(["build_VC_x64.bat"], shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE, cwd = buildDir, stdout = subprocess.PIPE, stderr = subprocess.PIPE)                
+				pipe = subprocess.Popen(["build_MinGW.bat"], shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE, cwd = buildDir, stdout = subprocess.PIPE, stderr = subprocess.PIPE)                
 				# retrieve output and error messages
 				outputMsg, errorMsg = pipe.communicate()
 				# get return code

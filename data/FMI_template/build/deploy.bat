@@ -1,6 +1,8 @@
 @echo off
 :: script is supposed to be executed in /build directory
 
+set ZIP_EXECUTABLE="c:\Program Files\7-Zip\7z.exe"
+
 if exist ..\bin\release_x64\FMI_template.dll goto DLL_EXISTS
 echo "ERROR: File FMI_template.dll expected in directory ..\bin\release_x64\FMI_template.dll, but does not exist.
 exit /b 1
@@ -37,7 +39,7 @@ cd ..
 ::create zip archive
 echo Creating archive 'FMI_template.zip'
 cd FMI_template
-7za a ../FMI_template.zip .
+call %ZIP_EXECUTABLE% a ../FMI_template.zip .
 cd ..
 
 echo Renaming archive to 'FMI_template.fmu'
