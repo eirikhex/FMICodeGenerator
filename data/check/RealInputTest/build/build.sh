@@ -46,8 +46,8 @@
 #
 #
 # FMU-specific variables - set by code generator
-FMU_SHARED_LIB_NAME=libP_Control
-FMU_SHARED_LIB_TARGET_NAME=P_Control
+FMU_SHARED_LIB_NAME=libRealInputTest
+FMU_SHARED_LIB_TARGET_NAME=RealInputTest
 FMU_SHARED_LIB_VERSION=1.0.0
 
 BUILD_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"

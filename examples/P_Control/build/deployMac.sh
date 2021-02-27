@@ -17,15 +17,15 @@ mkdir -p P_Control &&
 cd P_Control &&
 
 # create binary dir for Linux
-mkdir -p binaries/linux64 &&
+mkdir -p binaries/darwin64 &&
 
 # copy shared library, we expect it to be already renamed correctly
-cp ../../bin/release/P_Control.so binaries/linux64/P_Control.so &&
+cp ../../bin/release/P_Control.dylib binaries/darwin64/P_Control.dylib &&
 cp ../../data/modelDescription.xml . &&
 
 # create zip archive
-7za a ../P_Control.zip . | cat > /dev/null &&
-cd .. && 
+zip -r ../P_Control.zip . | cat > /dev/null &&
+cd .. &&
 mv P_Control.zip P_Control.fmu &&
 echo "Created P_Control.fmu" &&
 
